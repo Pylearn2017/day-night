@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    {% if not data.is_day %}
+        <style>
+            * {
+                background-color: #000;
+                color: #ccc;
+            }
+        </style>
+    {% endif %}
+    
+</head>
+<body>
+    <h1>It's work</h1>
+
+    {% if data.is_day %}
+        <p>Sunset time: {{ data.time_to }}</p>
+    {% else %}
+        <p>Sunrise time: {{ data.time_to }}</p>
+    {% endif %}
+    
+</body>
+</html>
